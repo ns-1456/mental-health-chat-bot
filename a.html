@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sum of Two Digits</title>
+    <script>
+        // Arrow function to calculate the sum of two digits
+        const calculateSum = () => {
+            let num1 = parseFloat(document.getElementById("num1").value);
+            let num2 = parseFloat(document.getElementById("num2").value);
+            let sum = num1 + num2;
+
+            // Display result
+            document.getElementById("result").innerHTML = "The sum is: " + sum;
+        };
+    </script>
+</head>
+<body>
+    <h2>Sum of Two Digits</h2>
+    <form onsubmit="return false;">
+        <label for="num1">Enter first number:</label><br>
+        <input type="number" id="num1" name="num1" required><br><br>
+
+        <label for="num2">Enter second number:</label><br>
+        <input type="number" id="num2" name="num2" required><br><br>
+
+        <!-- Button to calculate sum using arrow function -->
+        <input type="button" value="Calculate Sum" onclick="calculateSum()"><br><br>
+
+        <!-- Display result -->
+        <p id="result"></p>
+    </form>
+</body>
+</html>
